@@ -2,7 +2,7 @@ name: Build Kernel
 
 on:
   push:
-    tags: '*'
+    paths: '*'
 
 jobs:
   build:
@@ -24,7 +24,7 @@ jobs:
         NAME: lineage-kernelsu
       with:
         arch: arm64
-        compiler: gcc/12
+        compiler: aosp-clang/master/clang-r510928
         defconfig: surya_defconfig
         image: Image.gz-dtb
 
